@@ -1,6 +1,6 @@
 # Get All Indexes
 
-This project arose out of the need to be able to efficiently locate all the indexes of a particular item in a list (which comes up a surprisingly number of times in HackerRank problems).
+This project arose out of the need to be able to efficiently locate all the indexes of a particular item in a list (which comes up a surprising number of times in HackerRank problems).
 
 The first solution is an extension method on `List<T>` where `FindIndex` is doing the heavy lifting. It returns an `IEnumerable` and utlizes `yield return` so that the caller can decide to end the enumeration without having to enumerate through the whole list.
 
