@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetAllIndexes", "GetAllIndexes\GetAllIndexes.csproj", "{936C43C8-CF4A-4D48-A77A-EF3844AEFF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{49F70039-84B8-44AA-A9BF-A9066FEEBA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetAllIndexesTests", "GetAllIndexesTests\GetAllIndexesTests.csproj", "{E4080B74-04E0-4C28-87D8-6D4092EE6755}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{936C43C8-CF4A-4D48-A77A-EF3844AEFF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936C43C8-CF4A-4D48-A77A-EF3844AEFF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936C43C8-CF4A-4D48-A77A-EF3844AEFF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936C43C8-CF4A-4D48-A77A-EF3844AEFF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F70039-84B8-44AA-A9BF-A9066FEEBA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F70039-84B8-44AA-A9BF-A9066FEEBA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F70039-84B8-44AA-A9BF-A9066FEEBA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F70039-84B8-44AA-A9BF-A9066FEEBA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4080B74-04E0-4C28-87D8-6D4092EE6755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4080B74-04E0-4C28-87D8-6D4092EE6755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4080B74-04E0-4C28-87D8-6D4092EE6755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4080B74-04E0-4C28-87D8-6D4092EE6755}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
