@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using GetAllIndexes;
 
 #region integer testing
@@ -47,6 +47,25 @@ stopwatch.Reset();
 stopwatch.Start();
 wrappedList = new WrappedList<int>(largeList);
 var result4 = wrappedList.FindAllIndexes(0);
+stopwatch.Stop();
+
+Console.WriteLine($"Using Dictionary lookup: {stopwatch.ElapsedMilliseconds} ms");
+Console.WriteLine();
+
+Console.WriteLine("Large list - with one repeat: ");
+
+stopwatch.Start();
+var result5 = largeList.FindAllIndexes(0).ToList();
+var result6 = largeList.FindAllIndexes(1).ToList();
+stopwatch.Stop();
+
+Console.WriteLine($"Using FindIndex: {stopwatch.ElapsedMilliseconds} ms");
+
+stopwatch.Reset();
+stopwatch.Start();
+wrappedList = new WrappedList<int>(largeList);
+var result7 = wrappedList.FindAllIndexes(0);
+var result8 = wrappedList.FindAllIndexes(1);
 stopwatch.Stop();
 
 Console.WriteLine($"Using Dictionary lookup: {stopwatch.ElapsedMilliseconds} ms");
