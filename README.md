@@ -10,11 +10,11 @@ The [second solution](https://github.com/jozsurf/GetAllIndexes/blob/master/GetAl
 
 ### Benchmarks
 
-| Test                                        | Run time |
-|---------------------------------------------| ---------|
-| Small list of integers (10) using FindIndex | 1 ms |
-| Small list of integers (10) using Lookup | 1 ms |
-| Large list of integers (1000000) using FindIndex | 32 ms |
-| Large list of integers (1000000) using Lookup | 16 ms |
-| Large list of integers with one repeat using FindIndex | 73 ms |
-| Large list of integers with one repeat using Lookup | 15 ms |
+| Method                           | Mean            | Error         | StdDev          | Median          |
+|--------------------------------- |----------------:|--------------:|----------------:|----------------:|
+| FindIndex_SmallList              |        128.7 ns |       0.86 ns |         0.81 ns |        128.8 ns |
+| Lookup_SmallList                 |        173.6 ns |       3.51 ns |         8.60 ns |        170.5 ns |
+| FindIndex_LargeList              | 12,462,558.9 ns | 312,168.19 ns |   910,609.25 ns | 12,362,471.9 ns |
+| Lookup_LargeList                 |  8,622,792.0 ns | 148,866.63 ns |   139,249.93 ns |  8,619,154.7 ns |
+| FindIndex_LargeListWithOneRepeat | 22,834,194.7 ns | 514,618.66 ns | 1,459,887.49 ns | 22,405,675.0 ns |
+| Lookup_LargeListWithOneRepeat    |  8,344,775.9 ns |  58,932.88 ns |    52,242.46 ns |  8,362,004.7 ns |
