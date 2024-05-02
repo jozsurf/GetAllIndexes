@@ -24,7 +24,13 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void FindIndex_SmallList()
     {
-        _smallList.FindAllIndexes(0).ToList();
+        _smallList.FindAllIndexes_v1(0).ToList();
+    }
+    
+    [Benchmark]
+    public void SimpleIteration_SmallList()
+    {
+        _smallList.FindAllIndexes_v2(0).ToList();
     }
 
     [Benchmark]
@@ -37,7 +43,13 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void FindIndex_LargeList()
     {
-        _largeList.FindAllIndexes(0).ToList();
+        _largeList.FindAllIndexes_v1(0).ToList();
+    }
+    
+    [Benchmark]
+    public void SimpleIteration_LargeList()
+    {
+        _largeList.FindAllIndexes_v2(0).ToList();
     }
 
     [Benchmark]
@@ -50,8 +62,15 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void FindIndex_LargeListWithOneRepeat()
     {
-        _largeList.FindAllIndexes(0).ToList();
-        _largeList.FindAllIndexes(1).ToList();
+        _largeList.FindAllIndexes_v1(0).ToList();
+        _largeList.FindAllIndexes_v1(1).ToList();
+    }
+    
+    [Benchmark]
+    public void SimpleIteration_LargeListWithOneRepeat()
+    {
+        _largeList.FindAllIndexes_v2(0).ToList();
+        _largeList.FindAllIndexes_v2(1).ToList();
     }
 
     [Benchmark]

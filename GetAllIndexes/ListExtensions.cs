@@ -2,7 +2,10 @@
 
 public static class ListExtensions
 {
-    public static IEnumerable<int> FindAllIndexes<T>(this List<T> list, T reference) where T : notnull
+    /// <summary>
+    /// A convenience method that walks through a list using FindIndex to return all indexes for a given reference
+    /// </summary>
+    public static IEnumerable<int> FindAllIndexes_v1<T>(this List<T> list, T reference) where T : notnull
     {
         var index = list.FindIndex(FindNextMatch());
         while (index != -1)
@@ -16,6 +19,20 @@ public static class ListExtensions
         Predicate<T> FindNextMatch()
         {
             return x => x.Equals(reference);
+        }
+    }
+
+    /// <summary>
+    /// Simpler (and ultimately more performant) implementation that iterates through the whole list once, returning all indexes for a given reference
+    /// </summary>
+    public static IEnumerable<int> FindAllIndexes_v2<T>(this List<T> list, T reference) where T : notnull
+    {
+        for (var i = 0; i < list.Count; i++)
+        {
+            if (list[i].Equals(reference))
+            {
+                yield return i;
+            }
         }
     }
 }
