@@ -7,6 +7,8 @@ public static class ListExtensions
     /// </summary>
     public static IEnumerable<int> FindAllIndexes_v1<T>(this List<T> list, T reference) where T : notnull
     {
+        ArgumentNullException.ThrowIfNull(list);
+        
         var index = list.FindIndex(FindNextMatch());
         while (index != -1)
         {
@@ -27,6 +29,8 @@ public static class ListExtensions
     /// </summary>
     public static IEnumerable<int> FindAllIndexes_v2<T>(this List<T> list, T reference) where T : notnull
     {
+        ArgumentNullException.ThrowIfNull(list);
+        
         for (var i = 0; i < list.Count; i++)
         {
             if (list[i].Equals(reference))

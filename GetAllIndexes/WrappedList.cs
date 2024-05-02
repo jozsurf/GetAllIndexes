@@ -7,6 +7,8 @@ public class WrappedList<T> where T : IEquatable<T>
     
     public WrappedList(List<T> list)
     {
+        ArgumentNullException.ThrowIfNull(list);
+        
         List = list;
 
         for (var i = 0; i < list.Count; i++)
