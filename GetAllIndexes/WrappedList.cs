@@ -1,6 +1,6 @@
 namespace GetAllIndexes;
 
-public class WrappedList<T> where T : notnull
+public class WrappedList<T> where T : IEquatable<T>
 {
     public List<T> List { get; private set; }
     private readonly Dictionary<T, List<int>> _indexLookup = new();
