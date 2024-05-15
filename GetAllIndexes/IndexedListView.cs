@@ -1,13 +1,13 @@
 namespace GetAllIndexes;
 
-public class WrappedList<T> where T : IEquatable<T>
+public class IndexedListView<T> where T : IEquatable<T>
 {
     public IReadOnlyList<T> List => _list.AsReadOnly();
     
     private readonly List<T> _list;
     private readonly Dictionary<T, List<int>> _indexLookup = new();
     
-    public WrappedList(List<T> list)
+    public IndexedListView(List<T> list)
     {
         ArgumentNullException.ThrowIfNull(list);
         
