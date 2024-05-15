@@ -8,7 +8,7 @@ This solution works well with medium-sized lists but started to struggle when th
 
 A simpler alternative to this first solution which iterates through the whole list, comparing values was surprisingly found to be more performant compared to the `FindIndex` solution.
 
-The [second solution](https://github.com/jozsurf/GetAllIndexes/blob/master/GetAllIndexes/WrappedList.cs) utlizes a dictionary to be able to retrieve all the indexes of a given item. There is an upfront cost that needs to be paid to utilize this method (i.e. the whole list needs to be enumerated to be able to build up this dictionary lookup). Once done - and assuming the underlying list does not change - retrieving all indexes for a given item would have a constant time complexity i.e. `O(1)`. This makes this method ideal for scenarios where the indexes have to be retrieved repeatedly.
+The [second solution](https://github.com/jozsurf/GetAllIndexes/blob/master/GetAllIndexes/IndexedListView.cs) utilizes a dictionary to be able to retrieve all the indexes of a given item. There is an upfront cost that needs to be paid to utilize this method (i.e. the whole list needs to be enumerated to be able to build up this dictionary lookup). Once done - and assuming the underlying list does not change - retrieving all indexes for a given item would have a constant time complexity i.e. `O(1)`. This makes this method ideal for scenarios where the indexes have to be retrieved repeatedly.
 
 ### Benchmarks
 
