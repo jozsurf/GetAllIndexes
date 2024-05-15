@@ -36,7 +36,7 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void Lookup_SmallList()
     {
-        var wrappedList = new WrappedList<int>(_smallList);
+        var wrappedList = new IndexedListView<int>(_smallList);
         wrappedList.FindAllIndexes(0);
     }
 
@@ -55,7 +55,7 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void Lookup_LargeList()
     {
-        var wrappedList = new WrappedList<int>(_largeList);
+        var wrappedList = new IndexedListView<int>(_largeList);
         wrappedList.FindAllIndexes(0);        
     }
     
@@ -76,7 +76,7 @@ public class GetAllIndexesBenchmarks
     [Benchmark]
     public void Lookup_LargeListWithOneRepeat()
     {
-        var wrappedList = new WrappedList<int>(_largeList);
+        var wrappedList = new IndexedListView<int>(_largeList);
         wrappedList.FindAllIndexes(0);        
         wrappedList.FindAllIndexes(1);        
     }
