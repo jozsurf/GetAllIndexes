@@ -2,14 +2,16 @@ namespace GetAllIndexes;
 
 public class WrappedList<T> where T : IEquatable<T>
 {
-    public List<T> List { get; private set; }
+    public IReadOnlyList<T> List => _list.AsReadOnly();
+    
+    private readonly List<T> _list;
     private readonly Dictionary<T, List<int>> _indexLookup = new();
     
     public WrappedList(List<T> list)
     {
         ArgumentNullException.ThrowIfNull(list);
         
-        List = list;
+        _list = list;
 
         for (var i = 0; i < list.Count; i++)
         {
